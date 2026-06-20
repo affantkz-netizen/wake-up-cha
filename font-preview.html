@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>เลือกฟอนต์ · ตื่นมาก็ชาเย็น</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- โหลดฟอนต์ผู้เข้าชิงทั้ง 3 ตัวเลือก -->
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Mitr:wght@400;500;600;700&family=Itim&family=Sarabun:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --orange:#F8721B; --orange-soft:#FFF3EA; --caramel:#B5651D;
+    --coffee:#6F4E37; --cream:#FFF9F4; --ink:#2B2118; --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--cream);color:var(--ink);font-family:'Sarabun',sans-serif;line-height:1.6;padding:28px 16px 60px;}
+  .head{max-width:1180px;margin:0 auto 30px;text-align:center;}
+  .head h1{font-family:'Kanit',sans-serif;font-weight:700;font-size:1.9rem;color:var(--orange);}
+  .head p{color:#777;margin-top:6px;font-size:1rem;}
+  .grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media(max-width:900px){.grid{grid-template-columns:1fr;}}
+
+  .card{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(111,78,55,.12);border:1px solid #f0e3d6;display:flex;flex-direction:column;}
+  .tag{padding:14px 20px;color:#fff;font-family:'Kanit',sans-serif;font-weight:600;display:flex;align-items:center;justify-content:space-between;}
+  .opt1 .tag{background:linear-gradient(135deg,#F8721B,#B5651D);}
+  .opt2 .tag{background:linear-gradient(135deg,#FF7E3F,#E8893D);}
+  .opt3 .tag{background:linear-gradient(135deg,#F8721B,#6F4E37);}
+  .tag small{font-weight:400;opacity:.9;font-size:.78rem;}
+
+  /* hero ตัวอย่าง */
+  .demo{padding:26px 22px;border-bottom:1px dashed #eadbcb;background:var(--orange-soft);}
+  .brand-en{font-size:1.7rem;font-weight:700;letter-spacing:1px;color:var(--ink);}
+  .brand-th{font-size:.95rem;color:var(--caramel);font-weight:500;margin:2px 0 12px;}
+  .tagline{font-size:1.18rem;font-weight:600;color:var(--ink);line-height:1.35;}
+  .sub{font-size:.92rem;color:#6d5d50;margin-top:8px;}
+  .btn{display:inline-block;margin-top:16px;background:var(--orange);color:#fff;padding:11px 24px;border-radius:999px;font-weight:600;font-size:.95rem;}
+
+  /* menu ตัวอย่าง */
+  .body{padding:22px;}
+  .lbl{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--caramel);font-weight:600;margin-bottom:10px;}
+  .menu-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid #f3ece4;}
+  .menu-row:last-child{border:none;}
+  .menu-name{font-weight:600;font-size:1.02rem;}
+  .menu-desc{font-size:.82rem;color:#998;}
+  .menu-price{font-weight:700;color:var(--orange);font-size:1.08rem;}
+  .nums{margin-top:16px;display:flex;gap:18px;}
+  .nums div{font-size:.86rem;color:#6d5d50;}
+  .nums b{display:block;font-size:1.5rem;font-weight:700;color:var(--caramel);}
+  .vibe{padding:12px 22px;background:#fafafa;font-size:.84rem;color:#888;border-top:1px solid #f3ece4;}
+
+  /* ===== ฟอนต์แต่ละตัวเลือก ===== */
+  .opt1 .brand-en,.opt1 .brand-th,.opt1 .tagline,.opt1 .sub,.opt1 .btn,
+  .opt1 .menu-name,.opt1 .menu-price,.opt1 .nums b,.opt1 .lbl{font-family:'Kanit',sans-serif;}
+  .opt2 .brand-en,.opt2 .brand-th,.opt2 .tagline,.opt2 .sub,.opt2 .btn,
+  .opt2 .menu-name,.opt2 .menu-price,.opt2 .nums b,.opt2 .lbl{font-family:'Mitr',sans-serif;}
+  .opt3 .brand-en,.opt3 .brand-th,.opt3 .tagline,.opt3 .sub,.opt3 .btn,
+  .opt3 .menu-name,.opt3 .menu-price,.opt3 .nums b,.opt3 .lbl{font-family:'Itim',cursive;}
+
+  .foot{max-width:1180px;margin:34px auto 0;text-align:center;background:#fff;border-radius:16px;padding:22px;border:1px solid #f0e3d6;}
+  .foot p{color:#555;font-size:.96rem;}
+  .foot b{color:var(--orange);}
+</style>
+</head>
+<body>
+  <div class="head">
+    <h1>🎨 เลือกฟอนต์ใหม่ให้เว็บ</h1>
+    <p>เทียบ 3 สไตล์ "วัยรุ่น สนุกๆ" — ดูตัวอย่างจริงทั้งหัวข้อ เมนู ปุ่ม แล้วบอกอามีมี่ว่าชอบตัวไหนค่ะ</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- ===== ตัวเลือก 1: KANIT ===== -->
+    <div class="card opt1">
+      <div class="tag">ตัวเลือกที่ 1 · Kanit <small>โมเดิร์น · ทันสมัย</small></div>
+      <div class="demo">
+        <div class="brand-en">WAKE UP CHA</div>
+        <div class="brand-th">ตื่นมาก็ชาเย็น</div>
+        <div class="tagline">ร้านชาเย็น ที่ชาเย็นไม่อร่อย<br>แต่เมนูอื่นโคตรอร่อย 😎</div>
+        <div class="sub">เปิดทุกวัน 07:00–19:00 · 4 สาขา</div>
+        <span class="btn">สั่งเลย →</span>
+      </div>
+      <div class="body">
+        <div class="lbl">เมนูแนะนำ</div>
+        <div class="menu-row"><div><div class="menu-name">ชาเย็น THAITEA</div><div class="menu-desc">ซิกเนเจอร์ของร้าน</div></div><div class="menu-price">30฿</div></div>
+        <div class="menu-row"><div><div class="menu-name">เอสเพรสโซ่เย็น</div><div class="menu-desc">เข้มกำลังดี</div></div><div class="menu-price">45฿</div></div>
+        <div class="nums"><div><b>4</b>สาขา</div><div><b>2</b>ปีที่เปิด</div><div><b>16</b>ทีมงาน</div></div>
+      </div>
+      <div class="vibe">✦ บึกบึน เหลี่ยมคม ดูแบรนด์มืออาชีพ · ฮิตในร้านคาเฟ่/สตรีทแฟชั่นยุคนี้</div>
+    </div>
+
+    <!-- ===== ตัวเลือก 2: MITR ===== -->
+    <div class="card opt2">
+      <div class="tag">ตัวเลือกที่ 2 · Mitr <small>กลมมน · เป็นมิตร</small></div>
+      <div class="demo">
+        <div class="brand-en">WAKE UP CHA</div>
+        <div class="brand-th">ตื่นมาก็ชาเย็น</div>
+        <div class="tagline">ร้านชาเย็น ที่ชาเย็นไม่อร่อย<br>แต่เมนูอื่นโคตรอร่อย 😎</div>
+        <div class="sub">เปิดทุกวัน 07:00–19:00 · 4 สาขา</div>
+        <span class="btn">สั่งเลย →</span>
+      </div>
+      <div class="body">
+        <div class="lbl">เมนูแนะนำ</div>
+        <div class="menu-row"><div><div class="menu-name">ชาเย็น THAITEA</div><div class="menu-desc">ซิกเนเจอร์ของร้าน</div></div><div class="menu-price">30฿</div></div>
+        <div class="menu-row"><div><div class="menu-name">เอสเพรสโซ่เย็น</div><div class="menu-desc">เข้มกำลังดี</div></div><div class="menu-price">45฿</div></div>
+        <div class="nums"><div><b>4</b>สาขา</div><div><b>2</b>ปีที่เปิด</div><div><b>16</b>ทีมงาน</div></div>
+      </div>
+      <div class="vibe">✦ นุ่มนวล อบอุ่น เข้าถึงง่าย · ให้ฟีลน่ารักสดใส แต่ยังอ่านสบายตา</div>
+    </div>
+
+    <!-- ===== ตัวเลือก 3: ITIM ===== -->
+    <div class="card opt3">
+      <div class="tag">ตัวเลือกที่ 3 · Itim <small>ลายมือ · ขี้เล่น</small></div>
+      <div class="demo">
+        <div class="brand-en">WAKE UP CHA</div>
+        <div class="brand-th">ตื่นมาก็ชาเย็น</div>
+        <div class="tagline">ร้านชาเย็น ที่ชาเย็นไม่อร่อย<br>แต่เมนูอื่นโคตรอร่อย 😎</div>
+        <div class="sub">เปิดทุกวัน 07:00–19:00 · 4 สาขา</div>
+        <span class="btn">สั่งเลย →</span>
+      </div>
+      <div class="body">
+        <div class="lbl">เมนูแนะนำ</div>
+        <div class="menu-row"><div><div class="menu-name">ชาเย็น THAITEA</div><div class="menu-desc">ซิกเนเจอร์ของร้าน</div></div><div class="menu-price">30฿</div></div>
+        <div class="menu-row"><div><div class="menu-name">เอสเพรสโซ่เย็น</div><div class="menu-desc">เข้มกำลังดี</div></div><div class="menu-price">45฿</div></div>
+        <div class="nums"><div><b>4</b>สาขา</div><div><b>2</b>ปีที่เปิด</div><div><b>16</b>ทีมงาน</div></div>
+      </div>
+      <div class="vibe">✦ ลายมือสนุก กวนๆ · เด็ก วัยรุ่น เข้าถึงง่าย เข้ากับแท็กไลน์กวนๆ ที่สุด</div>
+    </div>
+
+  </div>
+
+  <div class="foot">
+    <p>👉 ชอบตัวไหน บอกอามีมี่ว่า <b>"เอาตัวที่ 1 / 2 / 3"</b> เดี๋ยวจัดการเปลี่ยนให้ทั้งเว็บเลยค่ะ</p>
+    <p style="margin-top:8px;font-size:.86rem;color:#999;">เนื้อหาทั่วไป (ย่อหน้ายาวๆ) จะยังใช้ Sarabun อ่านง่าย — เปลี่ยนเฉพาะหัวข้อ/ปุ่ม/เมนู ให้ได้ลุควัยรุ่นโดยไม่เมื่อยตา</p>
+  </div>
+</body>
+</html>
