@@ -112,11 +112,11 @@ h1, h2, h3, .brand { font-family: var(--font-head); line-height: 1.2; font-weigh
   background-size: cover; background-position: center;
 }
 .hero-overlay { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(58,36,16,.40) 0%, rgba(58,36,16,.68) 100%); }
-.hero-content { max-width: 760px; padding-top: 80px; }
+.hero-content { max-width: 880px; padding-top: 80px; }
 .hero-logo { width: 168px; height: 168px; border-radius: 26px; object-fit: cover; margin-bottom: 28px; box-shadow: 0 16px 44px rgba(0,0,0,.38); border: 4px solid rgba(255,255,255,.85); }
 .hero-eyebrow { text-transform: uppercase; letter-spacing: 4px; font-size: .85rem; font-weight: 600; color: var(--sand); margin-bottom: 18px; }
-.hero h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); font-weight: 700; margin-bottom: 22px; }
-.hero-sub { font-size: clamp(1rem, 2vw, 1.2rem); color: rgba(255,255,255,.9); margin-bottom: 36px; }
+.hero h1 { font-size: clamp(2.1rem, 5vw, 3.6rem); font-weight: 700; line-height: 1.18; margin-bottom: 22px; text-wrap: balance; }
+.hero-sub { font-size: clamp(1rem, 2vw, 1.2rem); line-height: 1.6; color: rgba(255,255,255,.9); margin-bottom: 36px; text-wrap: balance; }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
 /* ----- mascot พระอาทิตย์ลอยน่ารัก ----- */
